@@ -57,7 +57,7 @@ header img{
 
 .flag{
   width: 2.5rem;
-  margin: 0 auto;
+  margin: .9 1;
 }
 
 
@@ -66,6 +66,13 @@ header h1{
   margin-bottom: 10px;
   color: #d8d8d8;
   font-weight: 400;
+}
+
+.frase{
+  font-size: 1.2rem;
+  color: #d8d8d8;
+  font-weight: 400;
+
 }
 
 
@@ -85,8 +92,8 @@ a.link button{
   cursor: pointer;
   transition: background-color 0.3s;
   transition: .2s;
-  background: linear-gradient(90deg, #8006f3 0%, #a907c9 100%);
-  box-shadow: 0 0 8px #8006f3;
+  background: linear-gradient(90deg, #ff0066 0%, #ff00b3 100%);
+  box-shadow: 0 0 8px #ff0066;
   font-weight: 500;
   
   letter-spacing: 1px;
@@ -97,14 +104,89 @@ a.link button{
 
 }
 
-
-
-
 a.link button:hover{
   background-color: #b700ff;
   transform: scale(1.03);
 }
 
+a.link button:active{
+  transform: scale(0.98);
+}
+
+a.link button:focus{
+  outline: none;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px){
+  .container{
+    padding: 10px;
+  }
+
+  header h1{
+    font-size: 1.5rem;
+  }
+
+  a.link button{
+    padding: 15px 60px;
+  }
+
+}
+
+@media (max-width: 480px){
+  header h1{
+    font-size: 1.2rem;
+  }
+
+  a.link button{
+    padding: 10px 40px;
+  }
+
+}
+
+/* Path: index.js */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './style.css';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+/* Path: App.js */
+import React from 'react';
+import './style.css';
+
+function App() {
+  return (
+    <div className="container">
+      <header>
+        <img src="logo.png" alt="Logo" />
+        <h1>Seja bem-vindo!</h1>
+      </header>
+
+      <section className="botoes-links">
+        <a href="https://www.google.com" className="link">
+          <button>Google</button>
+        </a>
+        <a href="https://www.facebook.com" className="link">
+          <button>Facebook</button>
+        </a>
+        <a href="https://www.instagram.com" className="link">
+          <button>Instagram</button>
+        </a>
+      </section>
+
+      <footer>
+        <p>Feito com ❤ por <a href="http//instagram.com/luanpazos" target="_blank" rel="noreferrer">Luan Pazos</a></p>
+      </footer>
+    </div>
+  );
 
 
 
