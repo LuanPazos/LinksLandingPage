@@ -30,7 +30,7 @@ body::before {
   background-image: url('background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(10px);
+  filter: blur(3px);
   z-index: -1;
 }
 
