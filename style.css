@@ -47,8 +47,7 @@ body::before {
 
 header{
   text-align: center;
-  margin-bottom: 40px;
-
+  margin-bottom: 20px;
 }
 
 header img{
@@ -56,12 +55,19 @@ header img{
   margin-bottom: 20px;
 }
 
+.flag{
+  width: 2.5rem;
+  margin: 0 auto;
+}
+
+
 header h1{
   font-size: 2rem;
   margin-bottom: 10px;
   color: #d8d8d8;
   font-weight: 400;
 }
+
 
 section.botoes-links{
   display: flex;
